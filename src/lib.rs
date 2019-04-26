@@ -56,6 +56,10 @@ pub type Result<T> = ::std::io::Result<T>;
 pub struct Library(imp::Library);
 
 impl Library {
+    pub fn get_handle(&self) -> *mut std::os::raw::c_void {
+        self.0.handle
+    }
+
     /// Find and load a dynamic library.
     ///
     /// The `filename` argument may be any of:

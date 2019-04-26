@@ -68,7 +68,7 @@ where F: FnOnce() -> Option<T> {
 
 /// A platform-specific equivalent of the cross-platform `Library`.
 pub struct Library {
-    handle: *mut raw::c_void
+    pub handle: *mut raw::c_void
 }
 
 unsafe impl Send for Library {}
